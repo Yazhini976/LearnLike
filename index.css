@@ -1,0 +1,43 @@
+:root{
+  --bg1: #f5f7ff;
+  --card: #ffffff;
+  --accent: #667eea;
+  --muted: #6b7280;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(135deg,#eef2ff 0%, #fff 100%);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+.app{width:100%;max-width:760px}
+.card{
+  background:var(--card);
+  border-radius:14px;
+  padding:28px;
+  box-shadow:0 10px 30px rgba(18,38,63,0.08);
+}
+.title{margin:0 0 16px 0;font-size:22px;color:#0f172a}
+.input-row{display:flex;gap:12px;margin-bottom:18px}
+.input-row input{
+  flex:1;padding:12px 14px;border-radius:10px;border:1px solid #e6eef8;font-size:15px;outline:none;
+}
+.input-row input:focus{box-shadow:0 2px 8px rgba(102,126,234,0.12);border-color:var(--accent)}
+.input-row button{
+  background:var(--accent);color:#fff;border:none;padding:10px 16px;border-radius:10px;cursor:pointer;
+}
+.task-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.task-item{
+  display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-radius:10px;border:1px solid #f0f4ff;
+}
+.task-item.completed span{text-decoration:line-through;color:var(--muted)}
+.task-left{display:flex;align-items:center;gap:10px;cursor:pointer}
+.task-left input{width:18px;height:18px}
+.task-right .del{background:#ff4b5c;border:none;color:#fff;padding:8px 10px;border-radius:8px;cursor:pointer}
+.muted{color:var(--muted)}
+.small{font-size:12px;margin-top:12px}
